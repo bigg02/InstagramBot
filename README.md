@@ -1,3 +1,6 @@
+Original repo
+github.com/ShivangKakkar/InstagramBot
+
 # Instagram Downloader Bot [@InstaloaderStarkBot](https://t.me/InstaloaderStarkBot)
 
 > A star ⭐ from you means a lot to us!
