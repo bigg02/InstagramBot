@@ -10,6 +10,6 @@ async def start(bot, msg):
 #	mention = user["mention"]
 	await bot.send_message(
 		msg.chat.id,
-		Data.START.format(msg.from_user),
+		Data.START,
 		reply_markup=InlineKeyboardMarkup(Data.buttons)
 	)
