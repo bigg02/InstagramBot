@@ -4,7 +4,7 @@ import asyncio
 import shutil
 from Config import INSTA_USERNAME, INSTA_PASSWORD
 from pyrogram import Client, filters
-from .database.users_sql import get_info
+#from .database.users_sql import get_info
 
 
 @Client.on_message(filters.private & ~filters.regex(r'^/'))
@@ -16,7 +16,7 @@ async def main(_, msg):
     try:
         matches = pattern.search(msg.text)
         post_id = matches.group(4)
-        username, password = await get_info(msg.from_user.id)
+        #username, password = await get_info(msg.from_user.id)
         if not username:
             username = INSTA_USERNAME
             password = INSTA_PASSWORD
