@@ -6,9 +6,9 @@ from pyrogram.types import CallbackQuery, InlineKeyboardMarkup
 # Callbacks
 @Client.on_callback_query()
 async def _callbacks(bot: Client, callback_query: CallbackQuery):
-    user = await bot.get_me()
+ #   user = await bot.get_me()
     # user_id = callback_query.from_user.id
-    mention = user["mention"]
+#    mention = user["mention"]
     query = callback_query.data.lower()
     if query.startswith("home"):
         if query == 'home':
@@ -17,7 +17,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             await bot.edit_message_text(
                 chat_id=chat_id,
                 message_id=message_id,
-                text=Data.START.format(callback_query.from_user.mention, mention),
+                text=Data.START.format(callback_query.from_user.id),
                 reply_markup=InlineKeyboardMarkup(Data.buttons),
             )
     elif query == "about":
